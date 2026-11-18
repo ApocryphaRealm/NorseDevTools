@@ -1,0 +1,6 @@
+Reason: NorseDevTools 0.1.0 lists every Norse mod's state, reloads every framework with one command, and reloads a framework by itself when a file in its folder is saved while the game runs.
+Batch B-20261117-232102-40b5, 2026-11-17 23:21-23:24 (Main Agent). One launch.
+- norse.status: 17 Norse folders - the frameworks "loaded" (or "data only" for NorseInput / NorseMoveset), versions from their NorseManifest manifests ("no manifest" for NorseRealtimeNative and the two test helpers), each log's error / warning count (the one error line in each is the log's own header line).
+- norse.reload: np.reload, nd.reload, nt.reload, nc.reload, pl.reload, ni.reload, nrn.movesets, nrn.bindings - all run through KismetSystemLibrary::ExecuteConsoleCommand; each framework's log shows its reload.
+- Auto reload: a patch file saved into the game's NorsePatcher patches folder while the game ran -> "auto reload: NorsePatcher patches changed -> np.reload run" and NorsePatcher "Outcast_Nithing.CombatRatingScale: 100 -> 123 (zz-devtools-live.ini:3)" within about a second; deleting it -> a second auto reload (0 files). A removed patch's values stay until the next map load (NorsePatcher writes values, it does not undo them) - documented.
+- The test file was deleted from the game folder before the game closed.
