@@ -50,6 +50,7 @@ namespace
         {L"NorseEncounters\\encounters", L"enc.reload", "NorseEncounters rules"},
         {L"NorseSound\\sounds", L"snd.reload", "NorseSound rules"},
         {L"NorseModelSwap\\models", L"mdl.reload", "NorseModelSwap rules"},
+        {L"NorseObjectSwap\\objects", L"obj.reload", "NorseObjectSwap rules"},
         {L"NorseMoveset\\movesets", L"nrn.movesets", "NorseMoveset movesets (NorseRealtimeNative)"},
         {L"NorseInput\\bindings", L"nrn.bindings", "NorseInput bindings (NorseRealtimeNative)"},
     };
@@ -69,6 +70,7 @@ namespace
         "enc.reload | enc.list                                  (NorseEncounters)",
         "snd.reload | snd.apply | snd.music | snd.test <rule>   (NorseSound)",
         "mdl.list [class] | mdl.apply | mdl.reload              (NorseModelSwap)",
+        "obj.classes [text] | obj.apply | obj.reload            (NorseObjectSwap)",
         "nm.list                                                 (NorseManifest)",
         "nrn.movesets | nrn.bindings | nrn.status | nrn.lock ... (NorseRealtimeNative)",
     };
