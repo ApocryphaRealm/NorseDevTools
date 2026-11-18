@@ -46,6 +46,7 @@ namespace
         {L"NorseConditions\\conditions", L"nc.reload", "NorseConditions presets"},
         {L"NorsePayload\\payloads", L"pl.reload", "NorsePayload tables"},
         {L"NorseImpact\\impacts", L"ni.reload", "NorseImpact rules"},
+        {L"NorseLoot\\loot", L"nl.reload", "NorseLoot rules"},
         {L"NorseMoveset\\movesets", L"nrn.movesets", "NorseMoveset movesets (NorseRealtimeNative)"},
         {L"NorseInput\\bindings", L"nrn.bindings", "NorseInput bindings (NorseRealtimeNative)"},
     };
@@ -61,6 +62,7 @@ namespace
         "pl.list | pl.reload | pl.log on|off                     (NorsePayload)",
         "ni.list | ni.reload | ni.test <rule>                    (NorseImpact)",
         "ncl.test | ncl.where <rva>                              (NorseCrashLog)",
+        "nl.reload | nl.apply | nl.dump <object path>            (NorseLoot)",
         "nm.list                                                 (NorseManifest)",
         "nrn.movesets | nrn.bindings | nrn.status | nrn.lock ... (NorseRealtimeNative)",
     };
