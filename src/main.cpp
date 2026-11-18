@@ -48,6 +48,7 @@ namespace
         {L"NorseImpact\\impacts", L"ni.reload", "NorseImpact rules"},
         {L"NorseLoot\\loot", L"nl.reload", "NorseLoot rules"},
         {L"NorseEncounters\\encounters", L"enc.reload", "NorseEncounters rules"},
+        {L"NorseSound\\sounds", L"snd.reload", "NorseSound rules"},
         {L"NorseMoveset\\movesets", L"nrn.movesets", "NorseMoveset movesets (NorseRealtimeNative)"},
         {L"NorseInput\\bindings", L"nrn.bindings", "NorseInput bindings (NorseRealtimeNative)"},
     };
@@ -65,6 +66,7 @@ namespace
         "ncl.test | ncl.where <rva>                              (NorseCrashLog)",
         "nl.reload | nl.apply | nl.dump <object path>            (NorseLoot)",
         "enc.reload | enc.list                                  (NorseEncounters)",
+        "snd.reload | snd.apply | snd.music | snd.test <rule>   (NorseSound)",
         "nm.list                                                 (NorseManifest)",
         "nrn.movesets | nrn.bindings | nrn.status | nrn.lock ... (NorseRealtimeNative)",
     };
