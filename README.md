@@ -13,3 +13,7 @@ Reload, inspect and test the Norse frameworks without restarting (NORSE: Oath of
   writes values; it does not undo them).
 
 0.1.0 tested in game (TEST-RESULT-0.1.0.txt).
+
+## Licence
+
+GPL-3.0-or-later (see LICENSE).
