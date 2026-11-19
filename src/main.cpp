@@ -235,14 +235,16 @@ class NorseDevTools : public RC::CppUserModBase
         g_mod = ModDir();
         g_mods = g_mod.parent_path();
         std::wstring dir;
+        int logLevel = 2; // uLogLevel: 0 trace, 1 debug, 2 info, 3 warn, 4 error, 6 off
         for (const auto& raw : ReadLines(g_mod / "NorseDevTools.ini"))
         {
             std::wstring l = Trim(StripComment(raw));
             if (l.rfind(L"sLogDir=", 0) == 0) dir = Trim(l.substr(8));
+            if (l.rfind(L"uLogLevel=", 0) == 0) logLevel = _wtoi(l.c_str() + 10);
             if (l.rfind(L"bAutoReload=", 0) == 0) g_autoReload = _wtoi(l.c_str() + 12) != 0;
         }
-        Log::Get().Open((dir.empty() ? g_mod : fs::path(dir)) / "NorseDevTools.log", 2);
-        Log::Get().Write(Level::Error, "NorseDevTools v%s - auto reload %s", NDT_VERSION, g_autoReload ? "on" : "off");
+        Log::Get().Open((dir.empty() ? g_mod : fs::path(dir)) / "NorseDevTools.log", logLevel);
+        Log::Get().Write(Level::Error, "NorseDevTools v%s - log level %d - auto reload %s", NDT_VERSION, logLevel, g_autoReload ? "on" : "off");
     }
 
     auto on_unreal_init() -> void override
